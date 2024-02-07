@@ -52,6 +52,21 @@ List of all meetings.
     <img src="docs/screenshots/getMeetings.png">
 </div>
 
+# GET: /meeting/suggestion
+
+exanple body:
+```
+{
+    "date": "2024-02-07",
+    "participant1": "adrian.widlak@adrianwii.pl",
+    "participant2": "john.snow@adrianwii.pl"
+}
+```
+List of available time slot for given day. Return array of proposed hours.
+<div style="text-align:center;">
+    <img src="docs/screenshots/suggestion.png">
+</div>
+
 
 # Running the app
 

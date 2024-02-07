@@ -30,6 +30,12 @@ const server = http.createServer((req: http.IncomingMessage, res: http.ServerRes
                 MeetingService.addMeeting(req, res).then(() => { });
             }
             break;
+        case '/meeting/suggestion':
+            //TODO it should be moved to separate controller
+            if (req.method === 'GET') {
+                MeetingService.getMeetingSuggestion(req, res);
+            }
+            break;
         default:
             res.statusCode = 404;
             res.end(JSON.stringify({ message: 'Not Found' }));

@@ -4,6 +4,7 @@
   "description": "Sample api for scheduling meetings based on own basic backend core.",
   "main": "main.ts",
   "scripts": {
+    "start": "npx tsc && node main.js",
     "test": "jest --coverage"
   },
   "keywords": [
