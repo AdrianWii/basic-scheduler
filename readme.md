@@ -48,6 +48,19 @@ $ npm run test
 
 ```
 
+Example output from cosole after running tests:
+
+<div style="text-align:center;">
+    <img src="docs/screenshots/jest-example-output.png">
+</div>
+
+
+Example output from postman after running manual tests:
+
+<div style="text-align:center;">
+    <img src="docs/screenshots/isEmailUnique.png">
+</div>
+
 ## Author
 
 - [@AdrianWii](https://www.github.com/AdrianWii)
