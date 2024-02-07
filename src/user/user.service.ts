@@ -20,6 +20,11 @@ class UserService {
                 return;
             }
 
+            if (this.isEmailUnique(email)) {
+                UserService.sendResponse(res, 400, { error: 'Email already exists' });
+                return;
+            }
+
             const user = new User(name, surname, email);
             this.users.push(user);
             UserService.sendResponse(res, 201, user);
@@ -28,6 +33,10 @@ class UserService {
             UserService.sendResponse(res, 400, { error: 'Invalid JSON' });
             return;
         }
+    }
+
+    static isEmailUnique(email: string): boolean {
+        return UserService.users.some(user => user.email === email);
     }
 
     //TODO move to HttpClient Service
