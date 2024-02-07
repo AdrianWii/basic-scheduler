@@ -1,0 +1,24 @@
+{
+  "name": "basic-scheduler",
+  "version": "1.0.0",
+  "description": "Sample api for scheduling meetings based on own basic backend core.",
+  "main": "main.ts",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [
+    "Deltek"
+  ],
+  "author": "Adrian Widlak",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.16",
+    "@types/sinon": "^17.0.3",
+    "jest": "^29.7.0",
+    "sinon": "^17.0.1",
+    "supertest": "^6.3.4",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
+  }
+}
