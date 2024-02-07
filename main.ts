@@ -1,4 +1,5 @@
 import http from 'http';
+import UserService from './src/user/user.service';
 
 const hostname = '127.0.0.1';
 const port = 3000;
@@ -9,9 +10,14 @@ const server = http.createServer((req: http.IncomingMessage, res: http.ServerRes
     switch (req.url) {
         //TODO add handlers
         case '/user':
-            res.statusCode = 200;
-            res.end(JSON.stringify({ message: 'Ok' }));
+            //TODO it should be moved to separate controller
+            if (req.method === 'GET') {
+                UserService.getUsers(req, res);
+            }
 
+            if (req.method === 'POST') {
+                UserService.addUser(req, res).then(() => { });
+            }
             break;
         default:
             res.statusCode = 404;
