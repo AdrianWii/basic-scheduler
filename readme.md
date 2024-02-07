@@ -26,10 +26,32 @@ exanple body:
 
 
 # GET: /user
-Listing list of all users.
+List of all users.
 <div style="text-align:center;">
     <img src="docs/screenshots/getUsers.png">
 </div>
+
+# POST: /meeting
+Adding new meeting.
+
+exanple body:
+```
+{
+    "title": "Meeting 3",
+    "startTime": "2024-02-10T00:00:00.000Z",
+    "participants": ["adrian.widlak@adrianwii.pl"]
+}
+```
+<div style="text-align:center;">
+    <img src="docs/screenshots/postMeeting.png">
+</div>
+
+# GET: /meeting
+List of all meetings.
+<div style="text-align:center;">
+    <img src="docs/screenshots/getMeetings.png">
+</div>
+
 
 # Running the app
 
